@@ -62,7 +62,7 @@ export default class CardFormScreen extends PureComponent {
       url:
         'https://us-central1-stripeproject-3e2a7.cloudfunctions.net/completePaymentWithStripe',
       data: {
-        amount: 10000,
+        amount: 10050,
         currency: 'usd',
         token: this.state.token,
       },
