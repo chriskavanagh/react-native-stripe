@@ -5,6 +5,7 @@ import {decode, encode} from 'base-64';
 import stripe from 'tipsi-stripe';
 import Button from './components/Button';
 import axios from 'axios';
+//import Home from './Home';
 
 stripe.setOptions({
   publishableKey:
@@ -61,7 +62,7 @@ export default class CardFormScreen extends PureComponent {
       url:
         'https://us-central1-stripeproject-3e2a7.cloudfunctions.net/completePaymentWithStripe',
       data: {
-        amount: 100,
+        amount: 10000,
         currency: 'usd',
         token: this.state.token,
       },
