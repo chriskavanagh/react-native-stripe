@@ -6,6 +6,8 @@ import stripe from 'tipsi-stripe';
 import Button from './components/Button';
 import axios from 'axios';
 //import Home from './Home';
+//import {NavigationContainer} from '@react-navigation/native';
+//import {createStackNavigator} from '@react-navigation/stack';
 
 stripe.setOptions({
   publishableKey:
