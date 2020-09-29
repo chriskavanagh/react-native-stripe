@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthStack from './AuthStack';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
