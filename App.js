@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {decode, encode} from 'base-64';
-import Checkout from './screens/Checkout';
 import TabNavigator from './Routes/TabNavigator';
 
 import {NavigationContainer} from '@react-navigation/native';

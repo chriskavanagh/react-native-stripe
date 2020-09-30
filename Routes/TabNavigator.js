@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthStack from './AuthStack';
+import HomeStack from './HomeStack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -8,7 +9,7 @@ const Tab = createBottomTabNavigator();
 export default () => {
   return (
     <Tab.Navigator
-      initialRouteName="User"
+      initialRouteName="Home"
       activeColor="#f0edf6"
       inactiveColor="#3e2465"
       barStyle={{backgroundColor: '#DCDCDC'}}
@@ -23,6 +24,16 @@ export default () => {
           tabBarLabel: 'User',
           tabBarIcon: ({color}) => (
             <Icon name="ios-person" color={color} size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Home"
+        component={HomeStack}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color}) => (
+            <Icon name="ios-home" color={color} size={25} />
           ),
         }}
       />
