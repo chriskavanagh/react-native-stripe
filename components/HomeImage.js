@@ -20,7 +20,6 @@ export default () => {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-          //position: 'relative',
         }}>
         <View style={styles.overlay} />
         <View style={styles.top}></View>

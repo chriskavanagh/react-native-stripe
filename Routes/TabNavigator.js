@@ -1,6 +1,8 @@
 import React from 'react';
 import AuthStack from './AuthStack';
 import HomeStack from './HomeStack';
+import FoodStack from './FoodStack';
+import CartStack from './CartStack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -32,6 +34,26 @@ export default () => {
         component={HomeStack}
         options={{
           tabBarLabel: 'Home',
+          tabBarIcon: ({color}) => (
+            <Icon name="ios-home" color={color} size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Menu"
+        component={FoodStack}
+        options={{
+          tabBarLabel: 'Menu',
+          tabBarIcon: ({color}) => (
+            <Icon name="ios-home" color={color} size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={CartStack}
+        options={{
+          tabBarLabel: 'Cart',
           tabBarIcon: ({color}) => (
             <Icon name="ios-home" color={color} size={25} />
           ),
