@@ -7,12 +7,7 @@ export default function AppTextInput(props) {
   return (
     <View style={styles.container}>
       {props.icon && (
-        <AntDesign
-          name={props.icon}
-          size={28}
-          color="#191970"
-          style={styles.icon}
-        />
+        <Icon name={props.icon} size={28} color="#191970" style={styles.icon} />
       )}
       <TextInput
         style={styles.textInput}

@@ -3,9 +3,11 @@ import MenuModal from '../components/MenuModal';
 import FilterLink from '../components/FilterLink';
 import {useSelector, useDispatch} from 'react-redux';
 import {ListItem} from 'react-native-elements';
-//import {AntDesign} from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/AntDesign';
 //import {Icon} from 'react-native-elements';
+//import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 import {
   StyleSheet,
   View,
@@ -27,11 +29,11 @@ import {
 export default function Menu({navigation}) {
   const myState = useSelector((state) => state.menuReducer.items);
   const user = useSelector((state) => state.userReducer.user);
-  //const all = useSelector(allSelector);
-  //const soup = useSelector(soupSelector);
+
+  // FontAwesome5 use (https://github.com/oblador/react-native-vector-icons/blob/master/FONTAWESOME5.md#usage)
+  const icon = <FontAwesome5 name={'cart-plus'} size={27} color={'#580000'} />;
 
   const dispatch = useDispatch();
-  //const myUser = React.useContext(UserContext);
 
   const [isVisible, setIsvisible] = useState(false);
   const [data, setData] = useState({});
@@ -108,15 +110,7 @@ export default function Menu({navigation}) {
               subtitleStyle={{color: 'black'}}
               bottomDivider
               chevron={{color: '#580000'}}
-              leftIcon={
-                <Icon
-                  name="cart-plus"
-                  type="font-awesome-5"
-                  color="#580000"
-                  size={24}
-                  containerStyle={{marginRight: 3}}
-                />
-              }
+              leftIcon={icon}
             />
           </TouchableOpacity>
         )}

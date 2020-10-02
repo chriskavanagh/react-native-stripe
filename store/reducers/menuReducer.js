@@ -1,4 +1,4 @@
-import {createSelector} from 'reselect';
+//import {createSelector} from 'reselect';
 import {initialState} from '../data';
 
 function menuReducer(state = initialState, action) {
