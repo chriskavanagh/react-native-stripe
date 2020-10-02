@@ -2,12 +2,11 @@ import React from 'react';
 import AppTextInput from './AppTextInput';
 import {Snackbar} from 'react-native-paper';
 import {Button} from 'react-native-elements';
-//import {MaterialIcons} from '@expo/vector-icons';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {addItem} from '../store/actions/cartActions';
 import NumericInput from 'react-native-numeric-input';
 import {useSelector, useDispatch} from 'react-redux';
 import takeoutsquare from '../assets/takeoutsquare.png';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {StyleSheet, View, Modal, Text, ScrollView, Image} from 'react-native';
 
 export default function MenuModal(props) {

@@ -9,6 +9,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createFirestoreInstance, getFirestore} from 'redux-firestore';
 import {ReactReduxFirebaseProvider, getFirebase} from 'react-redux-firebase';
 import firebase from 'firebase/app';
+import {YellowBox} from 'react-native';
+
+YellowBox.ignoreWarnings(['Require cycle:']);
 
 //Firebase won't work without this.
 if (!global.btoa) {

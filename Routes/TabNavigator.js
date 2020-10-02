@@ -45,7 +45,7 @@ export default () => {
         options={{
           tabBarLabel: 'Menu',
           tabBarIcon: ({color}) => (
-            <Icon name="ios-home" color={color} size={25} />
+            <Icon name="ios-book-sharp" color={color} size={25} />
           ),
         }}
       />
@@ -55,7 +55,7 @@ export default () => {
         options={{
           tabBarLabel: 'Cart',
           tabBarIcon: ({color}) => (
-            <Icon name="ios-home" color={color} size={25} />
+            <Icon name="basket-sharp" color={color} size={25} />
           ),
         }}
       />
