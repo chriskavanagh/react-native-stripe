@@ -31,7 +31,7 @@ export default function Menu({navigation}) {
   const user = useSelector((state) => state.userReducer.user);
 
   // FontAwesome5 use (https://github.com/oblador/react-native-vector-icons/blob/master/FONTAWESOME5.md#usage)
-  const icon = <FontAwesome5 name={'cart-plus'} size={27} color={'#580000'} />;
+  //const icon = <FontAwesome5 name={'cart-plus'} size={27} color={'#580000'} />;
 
   const dispatch = useDispatch();
 
@@ -66,7 +66,7 @@ export default function Menu({navigation}) {
         <ScrollView
           horizontal={true}
           alwaysBounceHorizontal={true}
-          //persistentScrollbar={true}
+          persistentScrollbar={true}
           contentContainerStyle={{
             marginVertical: 5,
           }}>
@@ -99,19 +99,31 @@ export default function Menu({navigation}) {
           </FilterLink>
         </ScrollView>
       </View>
+
       <FlatList
         data={myState}
         renderItem={({item}) => (
           <TouchableOpacity onPress={() => passData(item)}>
             <ListItem
-              title={item.dish}
-              titleStyle={{fontWeight: '700'}}
-              subtitle={`$${item.price.toFixed(2)}`}
-              subtitleStyle={{color: 'black'}}
               bottomDivider
-              chevron={{color: '#580000'}}
-              leftIcon={icon}
-            />
+              containerStyle={{backgroundColor: '#303030'}}>
+              <FontAwesome5
+                name="cart-plus"
+                color="#580000"
+                size={22}
+                containerStyle={{marginRight: 3}}
+              />
+              <ListItem.Content>
+                <ListItem.Title style={{fontWeight: '700', color: 'white'}}>
+                  {item.dish}
+                </ListItem.Title>
+                <ListItem.Subtitle
+                  style={{color: 'white'}}>{`$${item.price.toFixed(
+                  2,
+                )}`}</ListItem.Subtitle>
+              </ListItem.Content>
+              <ListItem.Chevron />
+            </ListItem>
           </TouchableOpacity>
         )}
         keyExtractor={(item) => item.id.toString()}
@@ -132,6 +144,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingHorizontal: 10,
     paddingVertical: 10,
+    backgroundColor: '#303030',
   },
   subContainer: {
     flexDirection: 'row',

@@ -1,8 +1,4 @@
 import React from 'react';
-//import { pics } from "../styles/pic_data";
-//import { Text, TouchableOpacity } from "react-native";
-//import EStyleSheet from "react-native-extended-stylesheet";
-
 import {Button} from 'react-native-elements';
 import {useNavigation} from '@react-navigation/native';
 
