@@ -2,16 +2,12 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import store from './store/store';
 import {decode, encode} from 'base-64';
-import {StyleSheet} from 'react-native';
 import TabNavigator from './Routes/TabNavigator';
 import {Provider as StoreProvider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {createFirestoreInstance, getFirestore} from 'redux-firestore';
 import {ReactReduxFirebaseProvider, getFirebase} from 'react-redux-firebase';
 import firebase from 'firebase/app';
-import {YellowBox} from 'react-native';
-
-YellowBox.ignoreWarnings(['Require cycle:']);
 
 //Firebase won't work without this.
 if (!global.btoa) {

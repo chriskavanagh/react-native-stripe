@@ -1,6 +1,6 @@
 import React from 'react';
 import AppTextInput from './AppTextInput';
-import {Snackbar} from 'react-native-paper';
+//import {Snackbar} from 'react-native-paper';
 import {Button} from 'react-native-elements';
 import {addItem} from '../store/actions/cartActions';
 import NumericInput from 'react-native-numeric-input';
@@ -22,14 +22,14 @@ export default function MenuModal(props) {
   //console.log(cart);
 
   // toggle for snackbar
-  const onToggleSnackBar = () => setVisible(!visible);
-  const onDismissSnackBar = () => setVisible(false);
+  //const onToggleSnackBar = () => setVisible(!visible);
+  //const onDismissSnackBar = () => setVisible(false);
 
   // add item to cart
   const myaddItem = (id, value, notes) => {
     console.log(`Modal Quantity-${quantity}`);
     dispatch(addItem(id, value, notes.trim()));
-    onToggleSnackBar();
+    //onToggleSnackBar();
     setQuantity(1);
     setNotes('');
   };
@@ -79,7 +79,7 @@ export default function MenuModal(props) {
               onPress={() => myaddItem(props.item.id, quantity, notes)}
             />
 
-            <Snackbar
+            {/* <Snackbar
               visible={visible}
               duration={2000}
               onDismiss={onDismissSnackBar}
@@ -90,7 +90,7 @@ export default function MenuModal(props) {
                 },
               }}>
               {props.item.dish} added to Cart!
-            </Snackbar>
+            </Snackbar> */}
           </View>
         </View>
       </ScrollView>

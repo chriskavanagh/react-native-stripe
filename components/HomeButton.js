@@ -11,8 +11,7 @@ export default (props) => {
 
   return (
     <Button
-      onPress={() => console.log('HomeButton')}
-      //onPress={() => navigation.navigate('Food')}
+      onPress={() => navigation.navigate('Menu')}
       title="Order Online!"
       type="outline"
       buttonStyle={{
