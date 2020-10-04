@@ -102,6 +102,7 @@ export default function Menu({navigation}) {
 
       <FlatList
         data={myState}
+        keyExtractor={(item) => item.id.toString()} // moved this from bottom
         renderItem={({item}) => (
           <TouchableOpacity onPress={() => passData(item)}>
             <ListItem
@@ -126,7 +127,6 @@ export default function Menu({navigation}) {
             </ListItem>
           </TouchableOpacity>
         )}
-        keyExtractor={(item) => item.id.toString()}
       />
 
       {/* <Button

@@ -3,7 +3,8 @@ import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 
-export default function FilterLink({dispatch, action, children}) {
+function FilterLink({dispatch, action, children}) {
+  console.log(`FliterLink Render`);
   return (
     <TouchableOpacity style={{marginHorizontal: 3, marginBottom: 15}}>
       <Button
@@ -37,3 +38,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default React.memo(FilterLink);
